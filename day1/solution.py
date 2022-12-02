@@ -25,7 +25,7 @@ The fifth Elf is carrying one food item with 10000 Calories.
 """
 
 # open text file in read mode
-text_file = open("./input.txt", "r")
+text_file = open("/Users/cameronscott/Dev/advent-of-code-2022/day1/input.txt", "r")
 
 #read whole file to a string
 data = text_file.read()
@@ -33,4 +33,16 @@ data = text_file.read()
 #close file
 text_file.close()
 
-print(data)
+each_elf_calories = data.split("\n\n")
+
+
+
+max = 0
+
+for calorie_counts in each_elf_calories:
+    sum = 0
+    for calorie_count in calorie_counts.split("\n"):
+        sum = sum + int(calorie_count)  
+    if sum > max:
+        max = sum
+print(max)        
