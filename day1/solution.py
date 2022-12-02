@@ -44,7 +44,6 @@ def find_nax_sum():
     maximums = []
     max = 0
     for calorie_counts in prepare_input():
-        # print(calorie_counts)
         sum = 0
         for calorie_count in calorie_counts.split("\n"):
             sum = sum + int(calorie_count)  
