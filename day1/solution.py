@@ -39,7 +39,7 @@ def prepare_input():
 
 
 
-def find_nax_sum():
+def find_max_sum():
     top_three_sum = 0
     maximums = []
     max = 0
@@ -54,4 +54,4 @@ def find_nax_sum():
     top_three_sum = sum(maximums[-3:])
     print(f'part 2: {top_three_sum}')
 
-find_nax_sum()
+find_max_sum()
