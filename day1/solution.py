@@ -44,16 +44,14 @@ def find_nax_sum():
     maximums = []
     max = 0
     for calorie_counts in prepare_input():
-        sum = 0
+        sum_calories = 0
         for calorie_count in calorie_counts.split("\n"):
-            sum = sum + int(calorie_count)  
-            if sum > max:
-                max = sum
+            sum_calories = sum_calories + int(calorie_count)  
+            if sum_calories > max:
+                max = sum_calories
                 maximums.append(max)
     print(f'part 1: {max}')
-    top_three_sum = top_three_sum + maximums[-3]
-    top_three_sum = top_three_sum + maximums[-2]
-    top_three_sum = top_three_sum + maximums[-1]
+    top_three_sum = sum(maximums[-3:])
     print(f'part 2: {top_three_sum}')
 
 find_nax_sum()
