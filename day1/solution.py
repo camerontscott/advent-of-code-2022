@@ -50,9 +50,10 @@ def find_nax_sum():
             if sum > max:
                 max = sum
                 maximums.append(max)
+    print(f'part 1: {max}')
     top_three_sum = top_three_sum + maximums[-3]
     top_three_sum = top_three_sum + maximums[-2]
     top_three_sum = top_three_sum + maximums[-1]
-    print(top_three_sum)
+    print(f'part 2: {top_three_sum}')
 
 find_nax_sum()
